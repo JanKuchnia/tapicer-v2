@@ -13,7 +13,7 @@
 <meta content="assets/realizacje/cadillac-kanapa-tylna.webp" property="og:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,11 +53,11 @@
       }
     }
     ::selection {
-      background-color: #d97706;
+      background-color: #f5b000;
       color: #0c0a09;
     }
     :focus-visible {
-      outline: 2px solid #fbbf24;
+      outline: 2px solid #ffcb3d;
       outline-offset: 3px;
     }
     html {
@@ -65,14 +65,28 @@
       scrollbar-color: #44403c #0c0a09;
     }
     .fine-border {
-      border: 1px solid rgba(217, 119, 6, 0.22);
+      border: 1px solid rgba(245, 176, 0, 0.22);
     }
     .fine-border-stone {
       border: 1px solid rgba(68, 64, 60, 0.5);
     }
     summary::-webkit-details-marker { display: none; }
+    :root { --ease-out: cubic-bezier(0.23, 1, 0.32, 1); --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1); }
+    .press { transition: color 150ms, background-color 150ms, border-color 150ms, transform 150ms var(--ease-out); }
+    .press:active { transform: scale(0.97); }
+    .press-lg:active { transform: scale(0.98); }
+    /* Keyframes, not @starting-style: Chrome 131+ hides closed <details> content with content-visibility, so it never counts as newly displayed. */
+    /* Slides in from the right, the edge the menu button sits on. */
+    header details[open] > div { animation: menu-in 300ms var(--ease-drawer); }
+    @keyframes menu-in { from { opacity: var(--menu-fade, 1); transform: translateX(var(--menu-shift, 100%)); } }
+    /* Keep the off-screen panel from widening the page mid-slide; clip, unlike hidden, keeps the sticky header working. */
+    html { overflow-x: clip; }
+    header details.closing > div { animation: menu-out 200ms var(--ease-drawer) forwards; }
+    @keyframes menu-out { to { opacity: var(--menu-fade, 1); transform: translateX(var(--menu-shift, 100%)); } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .press:active { transform: none; }
+      header details[open] > div { --menu-shift: 0; --menu-fade: 0; animation-duration: 150ms; }
     }
   </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -87,14 +101,14 @@
             stonecard: "#1c1917",
             stonemuted: "#292524",
             stoneline: "#44403c",
-            brass: "#d97706",
-            brasslight: "#fbbf24",
+            brass: "#f5b000",
+            brasslight: "#ffcb3d",
             chalk: "#fafaf9",
             bone: "#d6d3d1",
             warmash: "#a8a29e"
           },
           fontFamily: {
-            display: ["'Bodoni Moda'", "serif"],
+            display: ["'Playfair Display'", "serif"],
             mono: ["'JetBrains Mono'", "monospace"],
             sans: ["'Plus Jakarta Sans'", "sans-serif"]
           }
@@ -125,6 +139,11 @@
 <symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" /> <path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" /> <path d="M4 18v2" /> <path d="M20 18v2" /> <path d="M12 4v9" /></symbol>
 <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /> <path d="M12 2v2" /> <path d="M12 20v2" /> <path d="m4.93 4.93 1.41 1.41" /> <path d="m17.66 17.66 1.41 1.41" /> <path d="M2 12h2" /> <path d="M20 12h2" /> <path d="m6.34 17.66-1.41 1.41" /> <path d="m19.07 4.93-1.41 1.41" /></symbol>
 <symbol id="i-wand-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" /> <path d="m14 7 3 3" /> <path d="M5 6v4" /> <path d="M19 14v4" /> <path d="M10 2v2" /> <path d="M7 8H3" /> <path d="M21 16h-4" /> <path d="M11 3H9" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /> <path d="M12 7v5l4 2" /></symbol>
+<symbol id="i-images" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H4a2 2 0 0 1-2-2V6" /> <path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" /> <circle cx="12" cy="8" r="2" /> <rect width="16" height="16" x="6" y="2" rx="2" /></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></symbol>
+<symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" /> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /> <circle cx="18" cy="5" r="3" /></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3" /> <path d="M8.12 8.12 12 12" /> <path d="M20 4 8.12 15.88" /> <circle cx="6" cy="18" r="3" /> <path d="M14.8 14.8 20 20" /></symbol>
 <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol>
 </svg>
 <a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-3 focus:bg-brass focus:text-obsidian focus:font-mono focus:text-sm" href="#tresc">Przejdź do treści</a>
@@ -138,13 +157,13 @@
 </a>
 <div class="flex items-center gap-2 sm:gap-8">
 <nav aria-label="Główna" class="hidden lg:flex items-center gap-7 text-sm text-bone">
-<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#katalog-uslug">Usługi</a>
-<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#dziedzictwo">Tradycja</a>
-<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#projekty-archiwum">Realizacje</a>
-<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#proces">Jak pracujemy</a>
-<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#kontakt-lokalizacja">Dojazd</a>
+<a class="relative py-3 inline-flex items-center gap-2 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#katalog-uslug"><svg aria-hidden="true" class="shrink-0 w-4 h-4 text-brass"><use href="#i-scissors"/></svg><span>Usługi</span></a>
+<a class="relative py-3 inline-flex items-center gap-2 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#dziedzictwo"><svg aria-hidden="true" class="shrink-0 w-4 h-4 text-brass"><use href="#i-history"/></svg><span>Tradycja</span></a>
+<a class="relative py-3 inline-flex items-center gap-2 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#projekty-archiwum"><svg aria-hidden="true" class="shrink-0 w-4 h-4 text-brass"><use href="#i-images"/></svg><span>Realizacje</span></a>
+<a class="relative py-3 inline-flex items-center gap-2 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#proces"><svg aria-hidden="true" class="shrink-0 w-4 h-4 text-brass"><use href="#i-route"/></svg><span>Jak pracujemy</span></a>
+<a class="relative py-3 inline-flex items-center gap-2 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#kontakt-lokalizacja"><svg aria-hidden="true" class="shrink-0 w-4 h-4 text-brass"><use href="#i-map-pin"/></svg><span>Dojazd</span></a>
 </nav>
-<a class="h-11 px-4 sm:px-5 bg-brass hover:bg-brasslight text-obsidian font-semibold text-sm transition-colors flex items-center gap-2 whitespace-nowrap" href="tel:+48605304999">
+<a class="h-11 px-4 sm:px-5 bg-brass hover:bg-brasslight text-obsidian font-semibold text-sm press flex items-center gap-2 whitespace-nowrap" href="tel:+48605304999">
 <svg aria-hidden="true" class="shrink-0 w-[18px] h-[18px]"><use href="#i-phone"/></svg>
 <span class="sm:hidden">Zadzwoń</span>
 <span class="hidden sm:inline">605 304 999</span>
@@ -158,11 +177,11 @@
 </summary>
 <div class="absolute left-0 right-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto bg-obsidian border-t border-brass/20 px-4 sm:px-6 py-6 flex flex-col justify-between">
 <nav aria-label="Główna (mobilna)" class="flex flex-col font-display text-3xl text-chalk">
-<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#katalog-uslug">Usługi</a>
-<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#dziedzictwo">Tradycja</a>
-<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#projekty-archiwum">Realizacje</a>
-<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#proces">Jak pracujemy</a>
-<a class="py-3 hover:text-brass" href="#kontakt-lokalizacja">Dojazd</a>
+<a class="flex items-center gap-4 py-3 border-b border-stoneline/50 hover:text-brass" href="#katalog-uslug"><svg aria-hidden="true" class="shrink-0 w-6 h-6 text-brass"><use href="#i-scissors"/></svg><span>Usługi</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-stoneline/50 hover:text-brass" href="#dziedzictwo"><svg aria-hidden="true" class="shrink-0 w-6 h-6 text-brass"><use href="#i-history"/></svg><span>Tradycja</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-stoneline/50 hover:text-brass" href="#projekty-archiwum"><svg aria-hidden="true" class="shrink-0 w-6 h-6 text-brass"><use href="#i-images"/></svg><span>Realizacje</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-stoneline/50 hover:text-brass" href="#proces"><svg aria-hidden="true" class="shrink-0 w-6 h-6 text-brass"><use href="#i-route"/></svg><span>Jak pracujemy</span></a>
+<a class="flex items-center gap-4 py-3 hover:text-brass" href="#kontakt-lokalizacja"><svg aria-hidden="true" class="shrink-0 w-6 h-6 text-brass"><use href="#i-map-pin"/></svg><span>Dojazd</span></a>
 </nav>
 <div class="pt-8 text-sm text-warmash">
 <p class="font-display italic text-lg text-brass mb-2">rymarz &amp; tapicer</p>
@@ -181,9 +200,9 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
 <div class="lg:col-span-7 flex flex-col justify-between">
 <div>
-<h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold uppercase text-chalk leading-[1.05] tracking-tight mb-6 text-balance">
+<h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl font-bold uppercase text-chalk leading-[1.05] tracking-tight mb-6 text-balance">
                 Tapicer <br/>
-<span class="italic font-normal text-brass">samochodowy</span><br/>
+<span class="italic font-semibold text-brass">samochodowy</span><br/>
                 &amp; Rymarz
                 <span class="block mt-4 font-mono text-sm sm:text-base font-medium normal-case tracking-wide text-bone">Kraków · Myślenice · Krzyszkowice</span>
 </h1>
@@ -194,11 +213,11 @@
 </div>
 <div class="space-y-6 pt-2">
 <div class="flex flex-wrap items-center gap-4">
-<a class="px-6 sm:px-8 py-5 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide transition-colors flex items-center gap-3" href="tel:+48605304999">
+<a class="px-6 sm:px-8 py-5 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide press flex items-center gap-3" href="tel:+48605304999">
 <svg aria-hidden="true" class="shrink-0 w-[20px] h-[20px]"><use href="#i-phone"/></svg>
 <span>Zadzwoń po wycenę: 605 304 999</span>
 </a>
-<a class="px-6 sm:px-8 py-5 bg-stonecard border fine-border-stone hover:border-brass text-chalk font-mono text-sm tracking-wide transition-colors flex items-center gap-3" href="#kontakt-lokalizacja">
+<a class="px-6 sm:px-8 py-5 bg-stonecard border fine-border-stone hover:border-brass text-chalk font-mono text-sm tracking-wide press flex items-center gap-3" href="#kontakt-lokalizacja">
 <span>Dojazd do pracowni</span>
 <svg aria-hidden="true" class="shrink-0 text-brass w-[18px] h-[18px]"><use href="#i-arrow-down-right"/></svg>
 </a>
@@ -419,7 +438,7 @@
 <li class="pt-6 border-t border-brass/50">
 <span class="block font-display text-3xl font-bold text-brass mb-4">01</span>
 <h3 class="font-display text-xl text-chalk font-semibold mb-3">Telefon</h3>
-<p class="text-sm text-warmash leading-relaxed">Rozmowa o pojeździe i zakresie prac pod numerem <a class="text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48605304999">605 304 999</a>. Umawiamy termin oględzin.</p>
+<p class="text-sm text-warmash leading-relaxed">Rozmowa o pojeździe i zakresie prac pod numerem <a class="inline-flex items-center gap-1.5 text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>605 304 999</span></a>. Umawiamy termin oględzin.</p>
 </li>
 <li class="pt-6 border-t border-brass/50">
 <span class="block font-display text-3xl font-bold text-brass mb-4">02</span>
@@ -488,11 +507,11 @@
 </div>
 <div class="py-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
 <dt class="text-warmash">Telefon</dt>
-<dd><a class="text-brasslight font-bold hover:underline underline-offset-4" href="tel:+48605304999">605 304 999</a></dd>
+<dd><a class="inline-flex items-center gap-1.5 text-brasslight font-bold hover:underline underline-offset-4" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>605 304 999</span></a></dd>
 </div>
 </dl>
 <div>
-<a class="inline-flex items-center gap-3 px-6 sm:px-8 py-4 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide transition-colors" href="https://www.google.com/maps/dir/?api=1&amp;destination=Krzyszkowice+320A%2C+32-445+Krzyszkowice" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center gap-3 px-6 sm:px-8 py-4 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide press" href="https://www.google.com/maps/dir/?api=1&amp;destination=Krzyszkowice+320A%2C+32-445+Krzyszkowice" rel="noopener noreferrer" target="_blank">
 <svg aria-hidden="true" class="shrink-0 w-[18px] h-[18px]"><use href="#i-navigation"/></svg>
 <span>Wyznacz trasę w Mapach Google</span>
 </a>
@@ -512,12 +531,12 @@
 <div class="max-w-3xl mx-auto flex flex-col items-center">
 <div aria-hidden="true" class="w-12 h-1 bg-brass mb-8"></div>
 <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-6 text-balance">Zapraszamy na oględziny i wycenę</h2>
-<a class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-brass hover:text-brasslight transition-colors my-4 inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap" href="tel:+48605304999">
+<a class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-brass hover:text-brasslight press press-lg my-4 inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap" href="tel:+48605304999">
 <svg aria-hidden="true" class="shrink-0 w-[32px] h-[32px] sm:w-[54px] sm:h-[54px]"><use href="#i-phone"/></svg>
 <span>605 304 999</span>
 </a>
 <p class="font-mono text-sm tracking-wide text-warmash mt-6 mb-2">Pon.–pt. 08:00–17:00 · Krzyszkowice 320A (koło Myślenic)</p>
-<p class="text-bone max-w-md mb-10">Telefon stacjonarny: <a class="text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48122722365">(12) 272 23 65</a></p>
+<p class="text-bone max-w-md mb-10">Telefon stacjonarny: <a class="inline-flex items-center gap-1.5 text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48122722365"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>(12) 272 23 65</span></a></p>
 </div>
 </div>
 </section>
@@ -583,7 +602,21 @@
 </div>
 </footer>
 <script>
+  // <details> closes instantly, so play the slide-out first and drop [open] when it ends.
+  const menu = document.querySelector("header details");
+  const panel = menu.querySelector(":scope > div");
+  function closeMenu() {
+    if (!menu.open || menu.classList.contains("closing")) return;
+    const done = () => { menu.classList.remove("closing"); menu.open = false; };
+    menu.classList.add("closing");
+    // No animation running (e.g. disabled by the browser) means no animationend; close right away.
+    if (getComputedStyle(panel).animationName === "none") return done();
+    panel.addEventListener("animationend", done, { once: true });
+  }
+  menu.querySelector("summary").addEventListener("click", e => { if (menu.open) { e.preventDefault(); closeMenu(); } });
   // Close the mobile menu after a jump link is tapped; <details> stays open otherwise.
-  document.querySelectorAll("header details a").forEach(a => a.addEventListener("click", () => a.closest("details").open = false));
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+  // iOS Safari only applies :active when a touch listener exists.
+  document.addEventListener("touchstart", () => {}, { passive: true });
 </script>
 </body></html>
