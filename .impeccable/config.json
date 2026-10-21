@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T17:40:55.012Z",
+        "reason": "Claude: static scan cannot compile Tailwind CDN classes (reads h1/h2/body all as 16px); 390px and 1440px Firefox renders show padded containers and a 36-72px display scale"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T17:40:55.036Z",
+        "reason": "Claude: static scan cannot compile Tailwind CDN classes (reads h1/h2/body all as 16px); 390px and 1440px Firefox renders show padded containers and a 36-72px display scale"
+      }
+    ]
+  }
+}

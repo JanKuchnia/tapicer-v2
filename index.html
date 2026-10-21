@@ -3,19 +3,50 @@
 <html class="dark scroll-smooth" lang="pl"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="web_standard" name="shell-type"/>
-<title>MANUFAKTURA NOWAK — Rymarstwo &amp; Tapicerka Samochodowa (Krzyszkowice / Kraków / Myślenice)</title>
+<title>Tapicer samochodowy Kraków, Myślenice – Marcin Nowak</title>
+<meta content="Rodzinna pracownia rymarska i tapicerska w Krzyszkowicach koło Myślenic. Tapicerka samochodów zabytkowych i współczesnych, kierownice, podsufitki, pojazdy konne. Tel. 605 304 999." name="description"/>
+<meta content="#0c0a09" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="pl_PL" property="og:locale"/>
+<meta content="Tapicer samochodowy Kraków, Myślenice – Marcin Nowak" property="og:title"/>
+<meta content="Tapicerka samochodów zabytkowych i współczesnych, rymarstwo i pojazdy konne. Krzyszkowice 320A, tel. 605 304 999." property="og:description"/>
+<meta content="assets/realizacje/cadillac-kanapa-tylna.webp" property="og:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;0,6..96,900;1,400;1,600&amp;family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": "https://tapicer-samochodowy.pl/#business",
+  "name": "Rymarstwo – Marcin Nowak, Tapicer samochodowy",
+  "url": "https://tapicer-samochodowy.pl/",
+  "telephone": "+48605304999",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Krzyszkowice 320A",
+    "addressLocality": "Krzyszkowice",
+    "postalCode": "32-445",
+    "addressRegion": "małopolskie",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00", "closes": "17:00"
+  }],
+  "areaServed": ["Kraków", "Myślenice"],
+  "founder": { "@type": "Person", "name": "Marcin Nowak" },
+  "foundingDate": "2004"
+}
+</script>
 <style>
     @layer base {
       html, body {
         margin: 0;
         padding: 0;
         background-color: #0c0a09;
-        color: #f5f5f4;
+        color: #e7e5e4;
       }
       body {
         overscroll-behavior: none;
@@ -25,17 +56,23 @@
       background-color: #d97706;
       color: #0c0a09;
     }
-    .technical-grid {
-      background-size: 32px 32px;
-      background-image: 
-        linear-gradient(to right, rgba(217, 119, 6, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(217, 119, 6, 0.04) 1px, transparent 1px);
+    :focus-visible {
+      outline: 2px solid #fbbf24;
+      outline-offset: 3px;
+    }
+    html {
+      scroll-padding-top: 6rem;
+      scrollbar-color: #44403c #0c0a09;
     }
     .fine-border {
       border: 1px solid rgba(217, 119, 6, 0.22);
     }
     .fine-border-stone {
       border: 1px solid rgba(68, 64, 60, 0.5);
+    }
+    summary::-webkit-details-marker { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -53,6 +90,7 @@
             brass: "#d97706",
             brasslight: "#fbbf24",
             chalk: "#fafaf9",
+            bone: "#d6d3d1",
             warmash: "#a8a29e"
           },
           fontFamily: {
@@ -65,851 +103,487 @@
     }
   </script>
 </head>
-<body class="bg-obsidian font-sans text-stone-200 antialiased technical-grid selection:bg-brass selection:text-obsidian">
-<!-- TOP RUNNING TIME/COORDINATES MONOLITH BAR -->
-<div class="w-full bg-atelier border-b fine-border-stone text-xs font-mono tracking-wide text-warmash py-2 px-6 flex justify-between items-center z-50 relative">
-<div class="flex items-center gap-6">
-<span class="flex items-center gap-2 text-brass">
-<span class="w-2 h-2 rounded-full bg-brass"></span>
-        Warsztat czynny: pon.–pt. 08:00–17:00
-      </span>
-<span class="hidden md:inline text-stone-500">|</span>
-<span class="hidden md:inline">Krzyszkowice 320A / 49°52'24.8"N 19°55'48.2"E</span>
-</div>
-<div class="flex items-center gap-6">
-<span class="text-stone-400 font-semibold">Terminy wyłącznie na indywidualne zapisy</span>
-<span class="hidden sm:inline text-brass font-bold">ARC-REG: 1998/2004</span>
-</div>
-</div>
+<body class="bg-obsidian font-sans text-bone antialiased selection:bg-brass selection:text-obsidian">
+<!-- Lucide icons v0.469.0 (ISC) -->
+<svg aria-hidden="true" style="display:none">
+<symbol id="i-armchair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" /> <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" /> <path d="M5 18v2" /> <path d="M19 18v2" /></symbol>
+<symbol id="i-arrow-down-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10" /> <path d="M17 7v10H7" /></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10" /> <path d="M7 17 17 7" /></symbol>
+<symbol id="i-bike" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5" /> <circle cx="5.5" cy="17.5" r="3.5" /> <circle cx="15" cy="5" r="1" /> <path d="M12 17.5V14l-3-3 4-3 2 3h2" /></symbol>
+<symbol id="i-caravan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2" /> <path d="M2 9h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2" /> <path d="M22 17v1a1 1 0 0 1-1 1H10v-9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v9" /> <circle cx="8" cy="19" r="2" /></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /> <path d="M3.34 19a10 10 0 1 1 17.32 0" /></symbol>
+<symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3" /> <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /> <path d="m21 3 1 11h-2" /> <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /> <path d="M3 4h8" /></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /> <path d="M5 2h14" /> <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /> <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></symbol>
+<symbol id="i-joystick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2Z" /> <path d="M6 15v-2" /> <path d="M12 15V9" /> <circle cx="12" cy="6" r="3" /></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /></symbol>
+<symbol id="i-navigation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11" /></symbol>
+<symbol id="i-panel-top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M3 9h18" /></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+<symbol id="i-ship-wheel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8" /> <path d="M12 2v7.5" /> <path d="m19 5-5.23 5.23" /> <path d="M22 12h-7.5" /> <path d="m19 19-5.23-5.23" /> <path d="M12 14.5V22" /> <path d="M10.23 13.77 5 19" /> <path d="M9.5 12H2" /> <path d="M10.23 10.23 5 5" /> <circle cx="12" cy="12" r="2.5" /></symbol>
+<symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" /> <path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" /> <path d="M4 18v2" /> <path d="M20 18v2" /> <path d="M12 4v9" /></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /> <path d="M12 2v2" /> <path d="M12 20v2" /> <path d="m4.93 4.93 1.41 1.41" /> <path d="m17.66 17.66 1.41 1.41" /> <path d="M2 12h2" /> <path d="M20 12h2" /> <path d="m6.34 17.66-1.41 1.41" /> <path d="m19.07 4.93-1.41 1.41" /></symbol>
+<symbol id="i-wand-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" /> <path d="m14 7 3 3" /> <path d="M5 6v4" /> <path d="M19 14v4" /> <path d="M10 2v2" /> <path d="M7 8H3" /> <path d="M21 16h-4" /> <path d="M11 3H9" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol>
+</svg>
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-3 focus:bg-brass focus:text-obsidian focus:font-mono focus:text-sm" href="#tresc">Przejdź do treści</a>
 <!-- NAVIGATION HEADER -->
-<header class="sticky top-0 w-full z-40 bg-obsidian/90 backdrop-blur-xl border-b border-stoneline/50">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
-<!-- LOGO & BRAND MONOGRAPH -->
-<a class="flex items-center gap-4 group" href="/">
-<div class="w-12 h-12 border fine-border flex items-center justify-center bg-atelier relative p-1 transition-all group-hover:border-brass">
-<img alt="Logo Marcin Nowak Rymarstwo i Tapicerka" class="h-8 w-auto object-contain filter invert brightness-200 opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1WgxYp9Y0QU1zow_OTlOP8H5izRVIU8gbjLgW2CPp6tvDfMbHx4URdFWTEJKSMsrT337iRKUw--sMmj5x1eE7KstLltJvwvVFlQ0_vMGUXwvhyk1y8Z4EhqKITOWwrumKsDPKVEWDcfMgj3idonkSP2KbO57OHPjDkAUPDpFkvxyia8aZAXfXCTJr7cpj_IYUiDgZBVVQNvuzr33plDp1nxSSPas1A45bEul-CIQtAktzVO11RZqjJh1ts"/>
-</div>
-<div class="flex flex-col">
-<span class="font-display text-2xl tracking-tight text-chalk group-hover:text-brass transition-colors font-bold uppercase">
-            Marcin Nowak
-          </span>
-<span class="font-mono text-xs tracking-wide text-brasslight">
-            Atelier Rymarstwa &amp; Tapicerki Samochodowej
-          </span>
-</div>
+<header class="sticky top-0 w-full z-40 bg-obsidian/95 border-b border-brass/20">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 md:h-20 flex items-center justify-between gap-4">
+<a class="flex items-baseline gap-3 min-w-0 py-2 group" href="/">
+<span class="font-display text-xl md:text-2xl font-semibold tracking-tight text-chalk whitespace-nowrap">Marcin Nowak</span>
+<span aria-hidden="true" class="hidden md:block self-center w-px h-5 bg-stoneline"></span>
+<span class="hidden md:block font-display italic text-lg text-brass whitespace-nowrap group-hover:text-brasslight transition-colors">rymarz &amp; tapicer</span>
 </a>
-<!-- MONOLITH NAVIGATION -->
-<nav class="hidden lg:flex items-center gap-8 font-mono text-xs tracking-widest uppercase">
-<a class="text-warmash hover:text-brass transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brass hover:after:w-full after:transition-all" href="#katalog-uslug">
-          01. Usługi (10)
-        </a>
-<a class="text-warmash hover:text-brass transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brass hover:after:w-full after:transition-all" href="#dziedzictwo">
-          02. Dziedzictwo
-        </a>
-<a class="text-warmash hover:text-brass transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brass hover:after:w-full after:transition-all" href="#projekty-archiwum">
-          03. Archiwum Dzieł
-        </a>
-<a class="text-warmash hover:text-brass transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brass hover:after:w-full after:transition-all" href="#proces">
-          04. Rygor Pracy
-        </a>
-<a class="text-warmash hover:text-brass transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brass hover:after:w-full after:transition-all" href="#kontakt-lokalizacja">
-          05. Pracownia &amp; Dojazd
-        </a>
+<div class="flex items-center gap-2 sm:gap-8">
+<nav aria-label="Główna" class="hidden lg:flex items-center gap-7 text-sm text-bone">
+<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#katalog-uslug">Usługi</a>
+<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#dziedzictwo">Tradycja</a>
+<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#projekty-archiwum">Realizacje</a>
+<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#proces">Jak pracujemy</a>
+<a class="relative py-3 hover:text-chalk transition-colors after:absolute after:left-0 after:bottom-2 after:h-px after:w-full after:bg-brass after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 motion-reduce:after:transition-none" href="#kontakt-lokalizacja">Dojazd</a>
 </nav>
-<!-- DIRECT LINE TRIGGER -->
-<div class="flex items-center gap-4">
-<a class="group relative px-6 py-3 bg-atelier border border-brass/40 hover:border-brass text-chalk transition-all overflow-hidden flex items-center gap-3" href="tel:+48605304999">
-<div class="absolute inset-0 bg-brass/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-<span class="material-symbols-outlined text-brass text-[18px]">phone_in_talk</span>
-<div class="flex flex-col text-left">
-<span class="font-mono text-[9px] uppercase tracking-widest text-brasslight">Pracownia / Wycena</span>
-<span class="font-mono font-bold text-sm tracking-wider text-chalk group-hover:text-brasslight">605 304 999</span>
-</div>
+<a class="h-11 px-4 sm:px-5 bg-brass hover:bg-brasslight text-obsidian font-semibold text-sm transition-colors flex items-center gap-2 whitespace-nowrap" href="tel:+48605304999">
+<svg aria-hidden="true" class="shrink-0 w-[18px] h-[18px]"><use href="#i-phone"/></svg>
+<span class="sm:hidden">Zadzwoń</span>
+<span class="hidden sm:inline">605 304 999</span>
 </a>
+<!-- Mobile menu: native details, no JS needed -->
+<details class="lg:hidden group/menu">
+<summary class="list-none cursor-pointer flex items-center justify-center w-11 h-11 text-chalk hover:text-brass">
+<svg aria-hidden="true" class="shrink-0 w-[26px] h-[26px] group-open/menu:hidden"><use href="#i-menu"/></svg>
+<svg aria-hidden="true" class="shrink-0 w-[26px] h-[26px] hidden group-open/menu:block"><use href="#i-x"/></svg>
+<span class="sr-only">Menu</span>
+</summary>
+<div class="absolute left-0 right-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto bg-obsidian border-t border-brass/20 px-4 sm:px-6 py-6 flex flex-col justify-between">
+<nav aria-label="Główna (mobilna)" class="flex flex-col font-display text-3xl text-chalk">
+<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#katalog-uslug">Usługi</a>
+<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#dziedzictwo">Tradycja</a>
+<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#projekty-archiwum">Realizacje</a>
+<a class="py-3 border-b border-stoneline/50 hover:text-brass" href="#proces">Jak pracujemy</a>
+<a class="py-3 hover:text-brass" href="#kontakt-lokalizacja">Dojazd</a>
+</nav>
+<div class="pt-8 text-sm text-warmash">
+<p class="font-display italic text-lg text-brass mb-2">rymarz &amp; tapicer</p>
+<p>Krzyszkowice 320A · pon.–pt. 08:00–17:00</p>
+<a class="inline-flex items-center gap-2 py-2 text-chalk font-semibold text-lg" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-5 h-5 text-brass"><use href="#i-phone"/></svg><span>605 304 999</span></a>
+</div>
+</div>
+</details>
 </div>
 </div>
 </header>
-<!-- MAIN EDITORIAL CONTENT -->
-<main class="w-full">
-<!-- HERO SECTION: THE BRUTALIST ATELIER MONOLITH -->
-<section class="relative w-full border-b border-stoneline/60 overflow-hidden py-16 md:py-24">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-<!-- Left Column: Manifesto & Typographic Scale -->
+<main class="w-full" id="tresc">
+<!-- HERO -->
+<section class="relative w-full border-b border-stoneline/60 overflow-hidden py-12 md:py-24">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
 <div class="lg:col-span-7 flex flex-col justify-between">
 <div>
-<div class="inline-flex items-center gap-3 px-3 py-1 bg-atelier border fine-border mb-8">
-<span class="w-1.5 h-1.5 bg-brass"></span>
-<span class="font-mono text-xs tracking-wide text-brasslight">
-                  Krzyszkowice / Kraków / Myślenice • Od 1998 roku
-                </span>
-</div>
-<h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold uppercase text-chalk leading-[1.05] tracking-tight mb-8">
+<h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold uppercase text-chalk leading-[1.05] tracking-tight mb-6 text-balance">
                 Tapicer <br/>
-<span class="italic font-normal text-brass font-display">samochodowy</span><br/>
-                &amp; Rymarz.
-              </h1>
-<div class="w-24 h-[1px] bg-brass mb-8"></div>
-<p class="font-sans text-lg md:text-xl text-stone-300 font-light leading-relaxed max-w-2xl mb-10">
-                Prywatna manufaktura rzemieślnicza Marcina Nowaka. Od ponad ćwierćwiecza tworzymy i rekonstruujemy wnętrza luksusowych oraz zabytkowych pojazdów. Żadnego seryjnego pośpiechu — wyłącznie selekcjonowane skóry naturalne z czołowych europejskich garbarni, ręczny dwuigłowy ścieg rymarski i bezkompromisowa precyzja kaletnicza.
+<span class="italic font-normal text-brass">samochodowy</span><br/>
+                &amp; Rymarz
+                <span class="block mt-4 font-mono text-sm sm:text-base font-medium normal-case tracking-wide text-bone">Kraków · Myślenice · Krzyszkowice</span>
+</h1>
+<div aria-hidden="true" class="w-24 h-px bg-brass mb-8"></div>
+<p class="text-lg md:text-xl text-bone leading-relaxed max-w-2xl mb-10">
+                Rodzinna pracownia rymarska Marcina Nowaka. Od 1998 roku pracujemy w skórze: zaczynaliśmy od uprzęży i pojazdów konnych, dziś odtwarzamy i szyjemy wnętrza samochodów zabytkowych i współczesnych. Bez seryjnego pośpiechu: każde zlecenie wyceniamy i planujemy indywidualnie.
               </p>
 </div>
-<!-- Direct CTA & Atelier Coordinates Box -->
-<div class="space-y-6 pt-4">
+<div class="space-y-6 pt-2">
 <div class="flex flex-wrap items-center gap-4">
-<a class="px-8 py-5 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-xs tracking-wide transition-colors flex items-center gap-3" href="tel:+48605304999">
-<span class="material-symbols-outlined text-[20px]">call</span>
+<a class="px-6 sm:px-8 py-5 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide transition-colors flex items-center gap-3" href="tel:+48605304999">
+<svg aria-hidden="true" class="shrink-0 w-[20px] h-[20px]"><use href="#i-phone"/></svg>
 <span>Zadzwoń po wycenę: 605 304 999</span>
 </a>
-<a class="px-8 py-5 bg-stonecard border fine-border-stone hover:border-brass text-chalk font-mono text-xs tracking-wide transition-colors flex items-center gap-3" href="#kontakt-lokalizacja">
-<span>Konsultacja w warsztacie</span>
-<span class="material-symbols-outlined text-brass text-[16px]">south_east</span>
+<a class="px-6 sm:px-8 py-5 bg-stonecard border fine-border-stone hover:border-brass text-chalk font-mono text-sm tracking-wide transition-colors flex items-center gap-3" href="#kontakt-lokalizacja">
+<span>Dojazd do pracowni</span>
+<svg aria-hidden="true" class="shrink-0 text-brass w-[18px] h-[18px]"><use href="#i-arrow-down-right"/></svg>
 </a>
 </div>
-<!-- Workshop Protocol Card -->
-<div class="p-4 bg-atelier border fine-border-stone flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs text-warmash">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-brass text-[20px]">schedule</span>
-<span>Godziny przyjęć: <strong class="text-chalk">Pn.–Pt. 08:00–17:00</strong></span>
-</div>
-<div class="flex items-center gap-2 text-brass">
-<span class="material-symbols-outlined text-[18px]">verified_user</span>
-<span>Terminy ustalamy z wyprzedzeniem</span>
+<div class="p-4 bg-atelier border fine-border-stone flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono text-sm text-warmash">
+<span class="flex items-center gap-3">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[20px] h-[20px]"><use href="#i-clock"/></svg>
+<span>Godziny pracy: <strong class="text-chalk">pon.–pt. 08:00–17:00</strong></span>
+</span>
+<span class="text-bone">Wizytę prosimy uzgodnić telefonicznie</span>
 </div>
 </div>
 </div>
+<figure class="lg:col-span-5">
+<div class="relative h-[360px] sm:h-[520px] overflow-hidden border fine-border bg-atelier">
+<img alt="Tylna kanapa limuzyny Cadillac obszyta szarą skórą, z pikowanymi oparciami i nowymi boczkami drzwi" class="w-full h-full object-cover" decoding="async" fetchpriority="high" height="768" src="assets/realizacje/cadillac-kanapa-tylna.webp" width="1024"/>
 </div>
-<!-- Right Column: Raw Material Showcase Monolith -->
-<div class="lg:col-span-5 relative">
-<div class="relative h-[480px] sm:h-[580px] overflow-hidden border fine-border">
-<img alt="Detal ręcznego przeszycia tapicerki skórzanej" class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOib8aMmVZ8qtskjDErgABPuVDb4lpi9nFL0haS_LAooWl5qn8UwMEC8A6YvlSAJCnHsFu_SP4lIXFukv9wRS0gaBBNT8AtmnIcb6vUoQJavwEkjthwsvdjVJBMqfVk3GzLcjLy8iie8XHeKr8zW7DYwRSngTUxXGTZL9VCETW5MNAB4RDE5PiWcxD-uOw5Ca24fJaqRQsY0Im_eu4U1PbVTrxfZc0q2qNg-LDfr7r8fmH_Byx81PX"/>
-<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent"></div>
-<!-- Overlaid Spec Badge Top -->
-<div class="absolute top-4 right-4 bg-obsidian/90 border fine-border px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-brass">
-                  Certyfikowane Garbarnie UE
-                </div>
-<!-- Overlaid Technical Card Bottom -->
-<div class="absolute bottom-4 left-4 right-4 p-5 bg-obsidian/95 border fine-border-stone backdrop-blur-md">
-<p class="font-display text-lg text-chalk font-semibold mb-2">
-                    Ręczne przeszycia i selekcjonowane skóry naturalne
-                  </p>
-<p class="font-sans text-sm text-stone-400 font-light">
-                    Ścieg francuski, nici kaletnicze o potrójnym splocie, odporność na promienie UV i autentyczna patyna przez dekady.
-                  </p>
-</div>
-</div>
-<!-- Technical Ledger Stamp -->
-<div class="hidden sm:flex items-center justify-between mt-3 px-2 font-mono text-xs text-stone-400">
-<span>Manufaktura Krzyszkowice</span>
-<span>Skóra pełnoziarnista</span>
-</div>
-</div>
+<figcaption class="mt-3 font-mono text-sm text-warmash">Cadillac, limuzyna: nowe wnętrze części pasażerskiej, wykonane w naszej pracowni.</figcaption>
+</figure>
 </div>
 </div>
 </section>
-<!-- SECTION 2: CATALOGUE DES SERVICES (All 10 services rigorously curated) -->
-<section class="w-full py-24 bg-atelier border-b border-stoneline/60" id="katalog-uslug">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-stoneline pb-8">
-<div>
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk">
-              Kunszt potwierdzony praktyką
-            </h2>
-</div>
-<p class="font-sans text-stone-400 max-w-md text-sm font-light mt-4 md:mt-0">
-            Od uprzęży powozowych i zabytkowych karoserii po ultranowoczesne kokpity. Każdy element szyty z poszanowaniem geometrii i parametrów fabrycznych.
+<!-- SERVICES -->
+<section class="w-full py-16 md:py-24 bg-atelier border-b border-stoneline/60" id="katalog-uslug">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-16 border-b border-stoneline pb-8">
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk text-balance">Zakres usług</h2>
+<p class="text-bone max-w-md">
+            Od uprzęży i powozów po kokpity współczesnych aut. Każdy element szyjemy z poszanowaniem kształtu i wzoru fabrycznego.
           </p>
 </div>
-<!-- 10 Services Grid as High-Contrast Archival Monoliths -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-stoneline">
-<!-- Service 01 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">01 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">swap_driving_apps_wheel</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Obszywanie kierownic</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Indywidualny dobór naturalnej skóry, idealne spasowanie krawędzi, korekta grubości i precyzyjny ścieg rzemieślniczy.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 02 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">02 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">auto_fix_high</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Renowacja zabytków</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Wierne odtwarzanie oryginalnych wnętrz klasyków, welurów i skór z epoki zgodnie ze specyfikacją fabryczną rocznika.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 03 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">03 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">airline_seat_recline_extra</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Tapicerka samochodowa</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Kompleksowe obszywanie foteli, kanap oraz boczków najwyższej próby skórą samochodową Nappa, gładką lub perforowaną.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 04 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">04 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">roofing</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Podsufitki</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Precyzyjna wymiana i naciąganie podsufitek materiałowych oraz z Alcantary bez pofałdowań i z zachowaniem geometrii szyberdachów.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 05 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">05 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">directions_car</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Dachy kabrio</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Profesjonalna naprawa, renowacja, impregnacja hydrofobowa i montaż nowych poszyć dachów materiałowych Sonnenland.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 06 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">06 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">speed</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Deski rozdzielcze</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Ekskluzywne obszywanie kokpitów skórą z zachowaniem fabrycznych linii, szwów bezpieczeństwa poduszek i konsoli środkowej.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 07 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">07 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">adjust</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Gałki i mieszki</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Detale tworzące klimat wnętrza: ręcznie zszywane mieszki, gałki zmiany biegów i dźwignie hamulca ręcznego.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 08 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">08 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">two_wheeler</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Siedzenia motocyklowe</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Profilowanie pianek, żelowe wkłady ergonomiczne oraz wodoodporna skóra do kanap motocyklowych custom i touring.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 09 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">09 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">chair</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Meble antyczne</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Tradycyjna renowacja zabytkowych foteli i kanap na pasach jutowych, sprężynach dwustożkowych i trawie morskiej.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-<!-- Service 10 -->
-<div class="bg-obsidian p-6 md:p-8 flex flex-col justify-between group hover:bg-stonecard transition-colors">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="font-mono text-xs text-brass font-bold">10 / 10</span>
-<span class="material-symbols-outlined text-stone-400 group-hover:text-brass transition-colors text-[22px]">agriculture</span>
-</div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brasslight transition-colors">Pojazdy konne</h3>
-<p class="font-sans text-xs text-stone-400 leading-relaxed font-light mb-6">
-                Korzenie naszego fachu: profesjonalne tapicerowanie powozów, bryczek i sani. Surowe skóry rymarskie i kute okucia.
-              </p>
-</div>
-<a class="font-mono text-[11px] uppercase tracking-wider text-brass flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="tel:+48605304999">
-<span>Konsultuj detal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-</div>
+<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-stoneline border border-stoneline">
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-ship-wheel"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Obszywanie kierownic</h3>
+<p class="text-sm text-warmash leading-relaxed">Dobór skóry i nici, spasowanie krawędzi, korekta grubości wieńca i ręczny ścieg ozdobny.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-wand-sparkles"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Renowacja zabytków</h3>
+<p class="text-sm text-warmash leading-relaxed">Odtwarzanie wnętrz klasyków na podstawie oryginalnych wzorów i resztek tapicerki.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-armchair"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Tapicerka samochodowa</h3>
+<p class="text-sm text-warmash leading-relaxed">Obszywanie foteli, kanap i boczków skórą naturalną, gładką lub perforowaną.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-panel-top"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Podsufitki</h3>
+<p class="text-sm text-warmash leading-relaxed">Wymiana i naciąganie podsufitek materiałowych i z Alcantary, także w autach z szyberdachem.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-sun"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Dachy kabrio</h3>
+<p class="text-sm text-warmash leading-relaxed">Naprawa, renowacja i wymiana poszyć dachów materiałowych.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-gauge"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Deski rozdzielcze</h3>
+<p class="text-sm text-warmash leading-relaxed">Obszywanie kokpitów i konsoli środkowej skórą, z zachowaniem fabrycznych linii.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-joystick"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Gałki i mieszki</h3>
+<p class="text-sm text-warmash leading-relaxed">Ręcznie szyte mieszki, gałki zmiany biegów i osłony hamulca ręcznego.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-bike"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Siedzenia motocyklowe</h3>
+<p class="text-sm text-warmash leading-relaxed">Profilowanie pianek i obszycie kanap motocyklowych skórą odporną na wodę.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-sofa"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Meble antyczne</h3>
+<p class="text-sm text-warmash leading-relaxed">Tradycyjna renowacja foteli i kanap na pasach, sprężynach i naturalnych wypełnieniach.</p>
+</li>
+<li class="bg-obsidian p-6 md:p-8">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] mb-5"><use href="#i-caravan"/></svg>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Pojazdy konne</h3>
+<p class="text-sm text-warmash leading-relaxed">Korzenie naszego fachu: tapicerka powozów, bryczek i sań oraz prace rymarskie.</p>
+</li>
+</ul>
+<p class="mt-8 font-mono text-sm text-warmash">
+          Nie widzisz swojej usługi? <a class="inline-flex items-center gap-1.5 text-brass hover:text-brasslight underline underline-offset-4 decoration-brass/40" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>Zadzwoń: 605 304 999</span></a>
+</p>
 </div>
 </section>
-<!-- SECTION 3: MANIFESTO & DZIEDZICTWO (Heritage & Brutalist Philosophy) -->
-<section class="w-full py-24 bg-obsidian border-b border-stoneline/60" id="dziedzictwo">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<!-- HERITAGE -->
+<section class="w-full py-16 md:py-24 bg-obsidian border-b border-stoneline/60" id="dziedzictwo">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-<!-- Manifesto Left -->
 <div class="lg:col-span-6">
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-8">
-              Rzemiosło z dziada pradziada. <br/>
-<span class="font-light italic text-brass font-display">Od uprzęży powozowych</span> po unikatowe klasyki
-            </h2>
-<p class="font-sans text-stone-300 font-light leading-relaxed mb-6">
-              Tradycja rymarska rozwija się w naszej rodzinie od 1998 roku, natomiast własną niezależną pracownię rzemieślniczą w Krzyszkowicach koło Myślenic prowadzimy nieprzerwanie od 2004 roku. Posiadamy wieloletnie doświadczenie w obróbce skór surowych, juchtowych, siodlarskich oraz luksusowych skór samochodowych typu Nappa z renomowanych garbarni Niemiec i Włoch.
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-8 text-balance">
+              Od uprzęży i powozów <br class="hidden sm:block"/>
+<span class="font-normal italic text-brass">po zabytkowe limuzyny</span>
+</h2>
+<p class="text-bone leading-relaxed mb-6 max-w-[65ch]">
+              Od 1998 roku pracuję w rodzinnym zakładzie rymarskim z wieloletnią tradycją. Zaczynałem od artykułów jeździeckich, z czasem zająłem się renowacją pojazdów konnych razem z ich tapicerką, a potem wnętrzami samochodów. W 2004 roku zarejestrowałem własną działalność: Rymarstwo – Marcin Nowak, Tapicer samochodowy.
             </p>
-<!-- Technical Philosophy Pills -->
-<div class="my-8 divide-y divide-stoneline/60 border-y border-stoneline/60">
-<div class="py-4 flex items-start gap-4">
-<span class="material-symbols-outlined text-brass text-[24px] shrink-0 mt-0.5">hourglass_bottom</span>
+<ul class="my-8 divide-y divide-stoneline/60 border-y border-stoneline/60">
+<li class="py-4 flex items-start gap-4">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] shrink-0 mt-0.5"><use href="#i-hourglass"/></svg>
 <div>
-<h3 class="font-sans text-sm text-chalk font-semibold mb-1">
-                    Terminy ustalamy z wyprzedzeniem
-                  </h3>
-<p class="font-sans text-sm text-stone-400 font-light max-w-[65ch]">
-                    Każdemu zleceniu poświęcamy tyle czasu, ile wymaga autentyczny kunszt manualny. Nie stosujemy pośpiechu ani kompromisów.
-                  </p>
+<h3 class="text-chalk font-semibold mb-1">Terminy ustalamy z wyprzedzeniem</h3>
+<p class="text-sm text-warmash max-w-[65ch]">Pracujemy ręcznie i nie bierzemy kilku dużych zleceń naraz. Termin rozpoczęcia ustalamy przy wycenie.</p>
 </div>
-</div>
-<div class="py-4 flex items-start gap-4">
-<span class="material-symbols-outlined text-brass text-[24px] shrink-0 mt-0.5">layers</span>
+</li>
+<li class="py-4 flex items-start gap-4">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] shrink-0 mt-0.5"><use href="#i-layers"/></svg>
 <div>
-<h3 class="font-sans text-sm text-chalk font-semibold mb-1">
-                    Naturalne skóry z najlepszych europejskich garbarni
-                  </h3>
-<p class="font-sans text-sm text-stone-400 font-light max-w-[65ch]">
-                    Pełnoziarniste lica o naturalnej odporności na promienie UV, z zachowaniem właściwej oddychalności i unikatowej patyny.
-                  </p>
+<h3 class="text-chalk font-semibold mb-1">Skóra dobrana do pojazdu</h3>
+<p class="text-sm text-warmash max-w-[65ch]">Kolor, faktura i grubość skóry pod konkretne auto, powóz lub motocykl, z próbnikami na miejscu.</p>
 </div>
-</div>
-<div class="py-4 flex items-start gap-4">
-<span class="material-symbols-outlined text-brass text-[24px] shrink-0 mt-0.5">handshake</span>
+</li>
+<li class="py-4 flex items-start gap-4">
+<svg aria-hidden="true" class="shrink-0 text-brass w-[24px] h-[24px] shrink-0 mt-0.5"><use href="#i-handshake"/></svg>
 <div>
-<h3 class="font-sans text-sm text-chalk font-semibold mb-1">
-                    Ręczny ścieg rymarski gwarantujący trwałość na dziesięciolecia
-                  </h3>
-<p class="font-sans text-sm text-stone-400 font-light max-w-[65ch]">
-                    Dwie igły, woskowana nić i równe prowadzenie linii – technologia, której nie zastąpi żadna masowa linia produkcyjna.
-                  </p>
+<h3 class="text-chalk font-semibold mb-1">Warsztat rymarski</h3>
+<p class="text-sm text-warmash max-w-[65ch]">Techniki rymarskie przeniesione do wnętrz samochodów: ręczne szycie, wykańczanie krawędzi, praca na oryginalnych wzorach.</p>
 </div>
+</li>
+</ul>
+<p class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-sm text-warmash">
+<span>Pracownia: Krzyszkowice 320A</span>
+<span aria-hidden="true" class="text-brass">/</span>
+<span>Właściciel: Marcin Nowak</span>
+</p>
 </div>
-</div>
-<div class="pt-2 flex items-center gap-6 font-mono text-xs text-warmash">
-<span>Siedziba: Krzyszkowice 320A</span>
-<span class="text-brass">/</span>
-<span>Mistrz rymarstwa: Marcin Nowak</span>
-</div>
-</div>
-<!-- Dual Imagery Heritage Ledger Right -->
 <div class="lg:col-span-6 grid grid-cols-2 gap-4">
 <div class="flex flex-col gap-4">
-<!-- Chrono 1998 Box -->
 <div class="border-t border-brass/50 pt-4 flex flex-col">
 <span class="font-display text-4xl text-brass font-bold">1998</span>
-<span class="font-sans text-sm text-warmash mt-2">
-                  Początki rodzinnej tradycji w rymarstwie i obróbce skór
-                </span>
+<span class="text-sm text-warmash mt-2">Praca w rodzinnym zakładzie rymarskim</span>
 </div>
-<div class="h-72 border fine-border-stone overflow-hidden bg-atelier">
-<img class="w-full h-full object-cover filter contrast-125" data-alt="Close up shot of master artisan hands stitching vegetable tanned thick leather with two needles and waxed thread on an antique wooden stitching pony in Krzyszkowice workshop, natural warm ambient lighting, artisanal heritage mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKeOCRgU-g3aTCIejMy1xYCQq1_9N3PSvGi4w2n3faeGdsX0e3XvYGeeJ8pK46_ouhJIXhWjkRgH4KJ3wTXqs0tlXhl-AYGdx-Hf6xvq_yiiL32lDsrmTUF9DP3SyuE_msEQGxFVDJwSm_yXze-74ObijQUYve5O7t6Ycjj4q6Wo34r0uST5QWohAH4mEPfNJtR6n8PdzWRimJUObEqc1L424GJNrml31WYCdnwrlQ2fZMTTXzIofc"/>
+<div class="h-56 sm:h-72 border fine-border-stone overflow-hidden bg-atelier">
+<img alt="Marcin Nowak przy pracy: montaż pikowanego oparcia w zielonych saniach" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/sanie-praca-w-warsztacie.webp" width="1024"/>
 </div>
 </div>
 <div class="flex flex-col gap-4 pt-8">
-<div class="h-72 border fine-border-stone overflow-hidden bg-atelier">
-<img class="w-full h-full object-cover filter contrast-125" data-alt="Spools of heavy-duty saddlery threads, antique leather edge creasers, skiving knives and natural hide swatches arranged meticulously on a rustic workbench, warm tones, fine craftsmanship detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHjq4_mXxLLbqRKEeywM_JYwEd95VZVe08y_0cf1S9RywPXw4PfT0_ioun1lpY1Mq_kXi_VupVMpn7JCDgk696yet26BvcY77rbzsE8UqmNqNgcX23Ac6pusK69_JfTquzXBmoLMm4HgG7JM4fVS4eO-LlKAP25yuWyDAg1KblTYCRo1RgYIF5UV-XjiMWPTd-mYJOJQBlgn30fv_5Bb97v_Qt1Ih09JGMG2TSYsrV1dNIRKDHWDTM"/>
+<div class="h-56 sm:h-72 border fine-border-stone overflow-hidden bg-atelier">
+<img alt="Powóz z czerwoną aksamitną kanapą pikowaną i obszytą frędzlami po renowacji" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/powoz-volant-kanapa.webp" width="1024"/>
 </div>
-<!-- Chrono 2004 Box -->
 <div class="border-t border-brass/50 pt-4 flex flex-col">
 <span class="font-display text-4xl text-brass font-bold">2004</span>
-<span class="font-sans text-sm text-warmash mt-2">
-                  Powstanie samodzielnej pracowni w Krzyszkowicach
-                </span>
+<span class="text-sm text-warmash mt-2">Własna pracownia w Krzyszkowicach</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 4: SELECTED MASTER ARCHIVE (Cadillac Flagship + Mercedes + Jaguar) -->
-<section class="w-full py-24 bg-atelier border-b border-stoneline/60" id="projekty-archiwum">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-stoneline pb-8">
-<div>
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk">
-              Wybrane realizacje
-            </h2>
+<!-- PROJECTS -->
+<section class="w-full py-16 md:py-24 bg-atelier border-b border-stoneline/60" id="projekty-archiwum">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+<div class="mb-12 md:mb-16 border-b border-stoneline pb-8">
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk">Wybrane realizacje</h2>
 </div>
-<div class="font-mono text-xs text-warmash mt-4 md:mt-0">
-            Kod projektowy: 1998–2025 / Małopolska
-          </div>
-</div>
-<!-- CADILLAC (Primary Flagship Case Study) -->
-<div class="bg-obsidian border fine-border mb-12 overflow-hidden">
+<article class="bg-obsidian border fine-border mb-12 overflow-hidden">
 <div class="grid grid-cols-1 lg:grid-cols-12">
-<div class="lg:col-span-7 relative h-[380px] sm:h-[460px] lg:h-[560px] overflow-hidden">
-<img alt="Cadillac – pełna renowacja wnętrza" class="w-full h-full object-cover filter contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRcbBKeEin7Hg0BLyehkGQgCyVGZnlXdICFcV5K73mcVAIn48f32fKiIaXF-zRjXThcRrZ4AD1mbHkYPt3UWsEp_vuTvDVXQwx96effYVauDjdjKnQpQUp8VjRl5Jtwolcb3NZY5PT0KqUN8WYdMR6mxyWLoHrLO29zKF4C_sQcL0U-iBC7jiZn7PdwD0eLQzIsTWvi80ddsSAv_3EiQyH5F6IsG_OXmL9Tf10DMhL56PGFyYiLJH4"/>
-<div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent"></div>
-<div class="absolute top-4 left-4 bg-brass text-obsidian px-3 py-1 font-mono text-[10px] font-bold tracking-widest uppercase">
-                PROJEKT WYRÓŻNIONY ARCHIWUM
-              </div>
+<div class="lg:col-span-7 h-[300px] sm:h-[460px] lg:h-[560px] overflow-hidden bg-atelier">
+<img alt="Czarna limuzyna Cadillac z boku, na trawie przed pracownią w Krzyszkowicach" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/cadillac-limuzyna-bok.webp" width="1024"/>
 </div>
-<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
+<div class="lg:col-span-5 p-6 sm:p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="font-display text-2xl md:text-3xl text-chalk font-bold uppercase mb-4">
-                  Cadillac – pełna renowacja wnętrza
-                </h3>
-<p class="font-sans text-stone-300 text-sm font-light leading-relaxed mb-8">
-                  Zabytkowa limuzyna Cadillac. Kompleksowe odtworzenie kabiny pasażerskiej w głębokiej skórze w odcieniach bordo i koniaku, z pikowaniem w stylu epoki i renowacją fornirowanych wykończeń.
+<h3 class="font-display text-2xl md:text-3xl text-chalk font-bold uppercase mb-4">Cadillac – renowacja wnętrza limuzyny</h3>
+<p class="text-bone leading-relaxed mb-8 max-w-[65ch]">
+                  Zabytkowa limuzyna Cadillac. Całe wnętrze części pasażerskiej odtworzone na podstawie oryginalnych próbek: kanapa z pikowanym oparciem, boczki drzwi i podsufitka w szarej skórze.
                 </p>
-<!-- Technical Specification Grid -->
-<div class="grid grid-cols-2 gap-x-6 border-t border-stoneline mb-8">
+<dl class="grid grid-cols-2 gap-x-6 border-t border-stoneline mb-8">
 <div class="py-3 border-b border-stoneline">
-<span class="font-mono text-[10px] text-warmash uppercase block mb-1">Zakres prac</span>
-<span class="font-sans text-xs text-chalk font-medium">Kanapy, boczki, podsufitka</span>
-</div>
-<div class="py-3 border-b border-stoneline">
-<span class="font-mono text-[10px] text-warmash uppercase block mb-1">Materiał</span>
-<span class="font-sans text-xs text-chalk font-medium">Skóra naturalna Bordo / Cognac</span>
+<dt class="font-mono text-xs text-warmash uppercase mb-1">Zakres prac</dt>
+<dd class="text-sm text-chalk font-medium">Kanapa, boczki, podsufitka</dd>
 </div>
 <div class="py-3 border-b border-stoneline">
-<span class="font-mono text-[10px] text-warmash uppercase block mb-1">Ścieg</span>
-<span class="font-sans text-xs text-chalk font-medium">Dwuigłowy kaletniczy</span>
+<dt class="font-mono text-xs text-warmash uppercase mb-1">Materiał</dt>
+<dd class="text-sm text-chalk font-medium">Szara skóra naturalna</dd>
 </div>
-<div class="py-3 border-b border-stoneline">
-<span class="font-mono text-[10px] text-warmash uppercase block mb-1">Pracownia</span>
-<span class="font-sans text-xs text-chalk font-medium">Krzyszkowice 320A</span>
+</dl>
 </div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-4 border-t border-stoneline">
-<span class="font-mono text-xs text-warmash">EGZEMPLARZ KOLEKCJONERSKI</span>
-<a class="font-mono text-xs uppercase tracking-wider text-brass hover:text-brasslight flex items-center gap-2" href="tel:+48605304999">
-<span>Konsultuj podobny projekt</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+<a class="self-start py-3 inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider text-brass hover:text-brasslight" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>Zapytaj o podobny projekt: 605 304 999</span></a>
 </div>
 </div>
-</div>
-</div>
-<!-- 2 SECONDARY ARCHIVE MONOLITHS (Mercedes & Jaguar) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Mercedes W123 -->
-<div class="group flex flex-col justify-between">
-<div class="relative h-64 overflow-hidden border fine-border-stone group-hover:border-brass transition-colors">
-<img class="w-full h-full object-cover filter contrast-110" data-alt="Classic Mercedes W123 Coupe interior restored with perforated dark tan leather seats, factory fluting, restored springs and period-correct seat piping, bathed in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBKA5h3gCm58LVN1IMvmK9j7gGCA2-XYgYhSsWRk6oadHaieox1XxJbdFnzJ95oLc13DKnLLWlh_U3VTGkV1j96o6IfSen5PJ7UvQ0bgPH6XpJ4PRnGYN8eZU1gZjV6gaRwgkFqMVpAW14tvfbGY32I7UJ7pfBYKx9Dhi9oYzdKhMXH5xsc-SYEX9iaYJ6y8cfSfT7Aj1GuOdrSepxPbPkpHIPNS-VR3uoj5HnFBeX5Ih3_s4gIF5M"/>
-<div class="absolute bottom-3 left-3 bg-obsidian/90 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-brass">
-                ARCHIWUM // KLASYKA STUTTGART
-              </div>
-</div>
-<div class="pt-6 flex flex-col justify-between flex-grow">
-<div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brass transition-colors">
-                  Mercedes W123 Coupe – Klasyczna tapicerka skórzana
-                </h3>
-<p class="font-sans text-sm text-stone-400 font-light leading-relaxed mb-6 max-w-[65ch]">
-                  Rekonstrukcja perforated leather, fabryczne przeszycia i odnowienie sprężyn foteli zgodnie ze specyfikacją katalogową.
-                </p>
-</div>
-<div class="pt-4 border-t border-stoneline/50 flex justify-between items-center font-mono text-xs">
-<span class="text-stone-500">MATERIAŁ: PERFORATED TAN</span>
-<a class="text-brass hover:text-brasslight flex items-center gap-1" href="tel:+48605304999">
-<span>Szczegóły realizacji</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Jaguar XJ -->
-<div class="group flex flex-col justify-between">
-<div class="relative h-64 overflow-hidden border fine-border-stone group-hover:border-brass transition-colors">
-<img class="w-full h-full object-cover filter contrast-110" data-alt="Luxury Jaguar XJ cockpit with deep dark brown nappa leather wrapped dashboard, cream double saddle stitching, perfectly fitted instrument binnacle and wooden inlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRnA0piycRI07gr5RKZNMtYQ37i_X7eWnxQxY_zYJg3QR65OIToexDa0ZYF7yCfC3URyLqlqG_u1gzmFaNMb6o45uS5Ph3Jz95rwPbHZzV2pM1aJlr6ookV3DlRLL7YaG7_9gXRoOKm1lsvUVrdaRM1mOnGMV1XluR3WHrFtdIyiuE5fAf59JAA3TK1FpUWlrJsBKmOLidhzRBJ0jS-HmLPUCOl5K0D-C0mDBYJ9On7hDFII-FypkG"/>
-<div class="absolute bottom-3 left-3 bg-obsidian/90 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-brass">
-                ARCHIWUM // LUXURY GT
-              </div>
-</div>
-<div class="pt-6 flex flex-col justify-between flex-grow">
-<div>
-<h3 class="font-display text-xl text-chalk font-semibold mb-3 group-hover:text-brass transition-colors">
-                  Jaguar XJ – Konserwacja i obszycie kokpitu oraz kierownicy
-                </h3>
-<p class="font-sans text-sm text-stone-400 font-light leading-relaxed mb-6 max-w-[65ch]">
-                  Ciemnobrązowa skóra nappa, kremowa nić rymarska, idealne spasowanie krawędzi oraz precyzyjne ułożenie wokół wskaźników.
-                </p>
-</div>
-<div class="pt-4 border-t border-stoneline/50 flex justify-between items-center font-mono text-xs">
-<span class="text-stone-500">MATERIAŁ: NAPPA DARK BROWN</span>
-<a class="text-brass hover:text-brasslight flex items-center gap-1" href="tel:+48605304999">
-<span>Szczegóły realizacji</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 5: PROTOCOL & WORKFLOW (Metodyka Pracy) -->
-<section class="w-full py-24 bg-obsidian border-b border-stoneline/60" id="proces">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
-<div class="text-center max-w-3xl mx-auto mb-16">
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk mb-4">
-            Jak wygląda realizacja zlecenia
-          </h2>
-<p class="font-sans text-stone-400 text-sm font-light max-w-xl mx-auto">
-            Każdy pojazd traktujemy jak dzieło sztuki użytkowej. Jasny, rygorystyczny proces zapewnia pełną przejrzystość na każdym etapie renowacji.
-          </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Step 1 -->
-<div class="pt-6 border-t border-brass/50 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-center mb-6">
-<span class="font-display text-3xl font-bold text-brass">01</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">KROK WSTĘPNY</span>
-</div>
-<h3 class="font-display text-lg text-chalk font-semibold mb-3">Telefon (605 304 999)</h3>
-<p class="font-sans text-xs text-stone-400 font-light leading-relaxed">
-                Wstępna rozmowa o zakresie prac, pojeździe i Państwa oczekiwaniach. Ustalamy dogodny termin spotkania w Krzyszkowicach.
-              </p>
-</div>
-<div class="pt-6 mt-6 border-t border-stoneline/40 font-mono text-xs text-brass">
-              DIALOG TECHNOLOGICZNY
-            </div>
-</div>
-<!-- Step 2 -->
-<div class="pt-6 border-t border-brass/50 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-center mb-6">
-<span class="font-display text-3xl font-bold text-brass">02</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">DOBÓR SUROWCA</span>
-</div>
-<h3 class="font-display text-lg text-chalk font-semibold mb-3">Oględziny i wycena</h3>
-<p class="font-sans text-xs text-stone-400 font-light leading-relaxed">
-                Spotkanie w warsztacie w Krzyszkowicach, dobór próbników skór i nici oraz rzetelna kalkulacja nakładu pracy.
-              </p>
-</div>
-<div class="pt-6 mt-6 border-t border-stoneline/40 font-mono text-xs text-brass">
-              PRÓBNIKI &amp; STRUKTURA
-            </div>
-</div>
-<!-- Step 3 -->
-<div class="pt-6 border-t border-brass/50 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-center mb-6">
-<span class="font-display text-3xl font-bold text-brass">03</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">HARMONOGRAM</span>
-</div>
-<h3 class="font-display text-lg text-chalk font-semibold mb-3">Termin realizacji</h3>
-<p class="font-sans text-xs text-stone-400 font-light leading-relaxed">
-                Z uwagi na ręczny charakter pracy, terminy ustalamy z wyprzedzeniem. Rezerwujemy czas wyłącznie dla Państwa projektu.
-              </p>
-</div>
-<div class="pt-6 mt-6 border-t border-stoneline/40 font-mono text-xs text-brass">
-              SKUPIENIE NA DETALU
-            </div>
-</div>
-<!-- Step 4 -->
-<div class="pt-6 border-t border-brass/50 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-center mb-6">
-<span class="font-display text-3xl font-bold text-brass">04</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">FINALIZACJA</span>
-</div>
-<h3 class="font-display text-lg text-chalk font-semibold mb-3">Odbiór pojazdu</h3>
-<p class="font-sans text-xs text-stone-400 font-light leading-relaxed">
-                Prezentacja gotowego wnętrza, omówienie zasad pielęgnacji skóry i odbiór auta dopracowanego w najmniejszym milimetrze.
-              </p>
-</div>
-<div class="pt-6 mt-6 border-t border-stoneline/40 font-mono text-xs text-brass">
-              JAKOŚĆ NA LATA
-            </div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 6: TESTIMONIALS / OPINIE KLIENTÓW -->
-<section class="w-full py-24 bg-atelier border-b border-stoneline/60">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-stoneline pb-8">
-<div>
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk">
-              Opinie klientów
-            </h2>
-</div>
-<div class="font-mono text-xs text-brass uppercase tracking-widest mt-4 md:mt-0">
-            ZWERYFIKOWANE REPUTACJE GOOGLE
-          </div>
-</div>
+</article>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Review 1 -->
+<article>
+<div class="h-64 overflow-hidden border fine-border-stone bg-obsidian">
+<img alt="Fotel Mercedesa 560 SL obszyty jasnoszarą skórą z perforowanymi przeszyciami pionowymi" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/mercedes-560-sl-fotel.webp" width="1024"/>
+</div>
+<h3 class="font-display text-xl text-chalk font-semibold mt-6 mb-3">Mercedes-Benz 560 SL</h3>
+<p class="text-sm text-warmash leading-relaxed max-w-[65ch]">Deska rozdzielcza, konsola, fotele oraz wykładzina obszyta skórą.</p>
+</article>
+<article>
+<div class="h-64 overflow-hidden border fine-border-stone bg-obsidian">
+<img alt="Wieniec kierownicy obszyty czarną skórą z czerwonym ściegiem krzyżykowym" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/kierownica-przeszycie.webp" width="1024"/>
+</div>
+<h3 class="font-display text-xl text-chalk font-semibold mt-6 mb-3">Kierownice</h3>
+<p class="text-sm text-warmash leading-relaxed max-w-[65ch]">Obszycia skórą z ręcznym ściegiem w kolorze dobranym do wnętrza auta.</p>
+</article>
+<article>
+<div class="h-64 overflow-hidden border fine-border-stone bg-obsidian">
+<img alt="Zielone sanie z pikowaną aksamitną kanapą po renowacji" class="w-full h-full object-cover" decoding="async" height="768" loading="lazy" src="assets/realizacje/sanie-po-renowacji.webp" width="1024"/>
+</div>
+<h3 class="font-display text-xl text-chalk font-semibold mt-6 mb-3">Sanie</h3>
+<p class="text-sm text-warmash leading-relaxed max-w-[65ch]">Nowa tapicerka siedzisk w zielonym aksamicie z pikowaniem.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PROCESS -->
+<section class="w-full py-16 md:py-24 bg-obsidian border-b border-stoneline/60" id="proces">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+<div class="max-w-3xl mb-12 md:mb-16">
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk mb-4 text-balance">Jak wygląda zlecenie</h2>
+<p class="text-bone max-w-xl">Cztery kroki od pierwszego telefonu do odbioru pojazdu.</p>
+</div>
+<ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<li class="pt-6 border-t border-brass/50">
+<span class="block font-display text-3xl font-bold text-brass mb-4">01</span>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Telefon</h3>
+<p class="text-sm text-warmash leading-relaxed">Rozmowa o pojeździe i zakresie prac pod numerem <a class="text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48605304999">605 304 999</a>. Umawiamy termin oględzin.</p>
+</li>
+<li class="pt-6 border-t border-brass/50">
+<span class="block font-display text-3xl font-bold text-brass mb-4">02</span>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Oględziny i wycena</h3>
+<p class="text-sm text-warmash leading-relaxed">Spotkanie w pracowni w Krzyszkowicach, dobór skóry i nici z próbników, wycena prac.</p>
+</li>
+<li class="pt-6 border-t border-brass/50">
+<span class="block font-display text-3xl font-bold text-brass mb-4">03</span>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Termin</h3>
+<p class="text-sm text-warmash leading-relaxed">Pracujemy ręcznie, dlatego termin rozpoczęcia ustalamy z wyprzedzeniem i podajemy go przy wycenie.</p>
+</li>
+<li class="pt-6 border-t border-brass/50">
+<span class="block font-display text-3xl font-bold text-brass mb-4">04</span>
+<h3 class="font-display text-xl text-chalk font-semibold mb-3">Odbiór</h3>
+<p class="text-sm text-warmash leading-relaxed">Oglądamy razem gotowe wnętrze i omawiamy, jak dbać o skórę.</p>
+</li>
+</ol>
+</div>
+</section>
+<!-- REVIEWS: Google Maps reviews supplied by the user 2026-10-21 (dates were relative: "6 miesięcy temu", "rok temu"). Names shortened to first name + initial. -->
+<section class="w-full py-16 md:py-24 bg-atelier border-b border-stoneline/60">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-b border-stoneline pb-8">
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk">Opinie klientów</h2>
+<a class="font-mono text-sm text-brass hover:text-brasslight underline underline-offset-4 decoration-brass/40 py-2 inline-flex items-center gap-1.5" href="https://www.google.com/maps/search/?api=1&amp;query=Tapicer+samochodowy+Marcin+Nowak+Krzyszkowice+320A" rel="noopener noreferrer" target="_blank"><span>Wszystkie opinie w Google</span><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-arrow-up-right"/></svg></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
 <figure class="border-t border-brass/50 pt-8 flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-1 text-brass mb-6">
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-</div>
-<p class="font-display text-base text-stone-200 italic leading-relaxed mb-8">
-                „Pan Marcin to prawdziwy mistrz rzemiosła, jakich dziś mało. Obszycie kierownicy i foteli w zabytkowym Mercedesie przerosło moje oczekiwania. Szwy równe jak od linijki, skóra pachnie i leży idealnie. Warto było czekać na wolny termin!”
-              </p>
-</div>
-<div class="pt-4 border-t border-stoneline">
-<span class="font-mono text-xs text-chalk uppercase font-semibold block">Tomasz K., Kraków</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">Opinia Google, 2024</span>
-</div>
+<blockquote class="font-display text-xl text-chalk italic leading-relaxed mb-6">
+              „Moja trzecia kierownica obszyta skórą w tym warsztacie. Bardzo dobra jakość wykonania, szybko i pedantycznie. Polecam.”
+            </blockquote>
+<figcaption class="font-mono text-sm text-warmash"><span class="text-chalk">Viacheslav S.</span> · opinia Google, 2026</figcaption>
 </figure>
-<!-- Review 2 -->
 <figure class="border-t border-brass/50 pt-8 flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-1 text-brass mb-6">
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-</div>
-<p class="font-display text-base text-stone-200 italic leading-relaxed mb-8">
-                „Renowacja wnętrza powozu i skórzanych foteli w klasyku wykonana po mistrzowsku. Widać lata doświadczenia rymarskiego. Podejście z szacunkiem do zabytku i klienta.”
-              </p>
-</div>
-<div class="pt-4 border-t border-stoneline">
-<span class="font-mono text-xs text-chalk uppercase font-semibold block">Andrzej M., Myślenice</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">Opinia Google</span>
-</div>
+<blockquote class="font-display text-xl text-chalk italic leading-relaxed mb-6">
+              „Umówiłem się na obszycie kierownicy za określoną kwotę, samochód postawiłem rano, po południu był do odbioru. Jakież było moje zdziwienie, gdy musiałem zapłacić mniej, niż się umawiałem.”
+            </blockquote>
+<figcaption class="font-mono text-sm text-warmash"><span class="text-chalk">Paweł K.</span> · opinia Google, 2025</figcaption>
 </figure>
-<!-- Review 3 -->
 <figure class="border-t border-brass/50 pt-8 flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-1 text-brass mb-6">
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-<span class="material-symbols-outlined text-[16px]">star</span>
-</div>
-<p class="font-display text-base text-stone-200 italic leading-relaxed mb-8">
-                „Świetny fachowiec. Od razu widać, że skóra to jego całe życie. Perfekcyjna podsufitka i kierownica w BMW E30. Bez pośpiechu, za to z absolutną dokładnością.”
-              </p>
-</div>
-<div class="pt-4 border-t border-stoneline">
-<span class="font-mono text-xs text-chalk uppercase font-semibold block">Michał W., Kraków</span>
-<span class="font-mono text-[10px] text-stone-500 uppercase tracking-widest">Opinia Google</span>
-</div>
+<blockquote class="font-display text-xl text-chalk italic leading-relaxed mb-6">
+              „Polecam, fachowa robota, z pewnością wrócę.”
+            </blockquote>
+<figcaption class="font-mono text-sm text-warmash"><span class="text-chalk">Kamil B.</span> · opinia Google, 2026</figcaption>
 </figure>
 </div>
 </div>
 </section>
-<!-- SECTION 7: LOCATION & CARTOGRAPHY (Obszar działania / Krzyszkowice 320A) -->
-<section class="w-full py-24 bg-obsidian border-b border-stoneline/60" id="kontakt-lokalizacja">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<!-- LOCATION -->
+<section class="w-full py-16 md:py-24 bg-obsidian border-b border-stoneline/60" id="kontakt-lokalizacja">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 <div class="lg:col-span-5 flex flex-col">
-<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-6">
-              Obszar działania: Kraków, Myślenice i cała Małopolska
-            </h2>
-<p class="font-sans text-stone-300 font-light leading-relaxed mb-8 text-sm">
-              Dogodny dojazd słynną „Zakopianką” (droga krajowa nr 7) bezpośrednio do Krzyszkowic. Nasz warsztat znajduje się w cichej, spokojnej okolicy sprzyjającej skupionej pracy warsztatowej nad unikatowymi pojazdami.
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-6 text-balance">Obszar działania: Kraków, Myślenice i Małopolska</h2>
+<p class="text-bone leading-relaxed mb-8 max-w-[65ch]">
+              Pracownia leży w Krzyszkowicach, przy Zakopiance (DK7), między Krakowem a Myślenicami. Przed przyjazdem prosimy o telefon.
             </p>
-<!-- Technical Route Markers -->
-<div class="mb-8 divide-y divide-stoneline/60 border-y border-stoneline/60">
-<div class="py-4 flex items-center justify-between gap-4">
-<span class="font-mono text-xs text-warmash">Trasa z Krakowa:</span>
-<span class="font-mono text-xs text-chalk font-semibold">20 minut (z południowych dzielnic)</span>
+<dl class="mb-8 divide-y divide-stoneline/60 border-y border-stoneline/60 font-mono text-sm">
+<div class="py-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+<dt class="text-warmash">Adres pracowni</dt>
+<dd class="text-chalk font-semibold">Krzyszkowice 320A, 32-445 Krzyszkowice</dd>
 </div>
-<div class="py-4 flex items-center justify-between gap-4">
-<span class="font-mono text-xs text-warmash">Trasa z Myślenic:</span>
-<span class="font-mono text-xs text-chalk font-semibold">5 minut z centrum</span>
+<div class="py-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+<dt class="text-warmash">Godziny</dt>
+<dd class="text-chalk font-semibold">pon.–pt. 08:00–17:00</dd>
 </div>
-<div class="py-4 flex items-center justify-between gap-4">
-<span class="font-mono text-xs text-brass">Adres pracowni:</span>
-<span class="font-mono text-xs text-brasslight font-bold">Krzyszkowice 320A, 32-445</span>
+<div class="py-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+<dt class="text-warmash">Telefon</dt>
+<dd><a class="text-brasslight font-bold hover:underline underline-offset-4" href="tel:+48605304999">605 304 999</a></dd>
 </div>
-</div>
+</dl>
 <div>
-<a class="inline-flex items-center gap-3 px-8 py-4 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-xs tracking-wide transition-colors shadow-lg" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px]">near_me</span>
-<span>Wyznacz trasę w Google Maps</span>
+<a class="inline-flex items-center gap-3 px-6 sm:px-8 py-4 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-sm tracking-wide transition-colors" href="https://www.google.com/maps/dir/?api=1&amp;destination=Krzyszkowice+320A%2C+32-445+Krzyszkowice" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="shrink-0 w-[18px] h-[18px]"><use href="#i-navigation"/></svg>
+<span>Wyznacz trasę w Mapach Google</span>
 </a>
 </div>
 </div>
-<!-- Original Map Image preserved strictly -->
 <div class="lg:col-span-7">
-<div class="relative h-[420px] md:h-[480px] overflow-hidden border fine-border">
-<div class="w-full h-full bg-cover bg-center filter grayscale contrast-125" data-location="Krzyszkowice 320A, 32-445 Krzyszkowice" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtzPanSlWqU-KtN4yOFgachF-4l6J8Z8h-D4mk5V0lyIumYUoRqkNKGkJom-wRSsM_iiOr5ADeL-CMlwSmodAFhb5esAnEZ7r4bvNLOK0fXtooid21ENSb0sMSezmLTdtXgsu1rZjGN0OfL4CFnNrlrzjZGQeikHhjqnW5h6CGE2F6WWA9rfJpv89u4dlWbJ9RFrfCTfXN35sQ7D82SQ5mYTpgTkiUBT-wniRxFnV4OqTVqeyyAJBf')"></div>
-<div class="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm p-6 bg-obsidian/95 border fine-border backdrop-blur-md shadow-2xl">
-<h3 class="font-display text-xl text-chalk font-semibold mb-2">Krzyszkowice 320A</h3>
-<p class="font-sans text-xs text-stone-400 font-light mb-3">
-                    32-445 Krzyszkowice (powiat myślenicki).<br/>
-                    Zalecamy kontakt telefoniczny przed każdą wizytą.
-                  </p>
-<a class="font-mono text-xs text-brass font-bold hover:underline flex items-center gap-1" href="tel:+48605304999">
-<span class="material-symbols-outlined text-[14px]">call</span>
-<span>605 304 999</span>
-</a>
-</div>
+<div class="h-[360px] md:h-[480px] overflow-hidden border fine-border bg-atelier">
+<iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Krzyszkowice+320A,+32-445+Krzyszkowice&amp;z=13&amp;output=embed" title="Mapa dojazdu: Krzyszkowice 320A, 32-445 Krzyszkowice"></iframe>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 8: ATELIER FINALE CALLOUT -->
-<section class="w-full py-28 bg-atelier text-center relative overflow-hidden">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+<!-- FINAL CTA -->
+<section class="w-full py-20 md:py-28 bg-atelier text-center">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
 <div class="max-w-3xl mx-auto flex flex-col items-center">
-<div class="w-12 h-1 bg-brass mb-8"></div>
-<h2 class="font-display text-3xl sm:text-6xl font-bold uppercase text-chalk leading-tight mb-8">
-            Zapraszamy na oględziny i indywidualną wycenę
-          </h2>
-<a class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-brass hover:text-brasslight transition-colors my-4 inline-flex items-center gap-4" href="tel:+48605304999">
-<span class="material-symbols-outlined text-[36px] sm:text-[54px]">phone_in_talk</span>
+<div aria-hidden="true" class="w-12 h-1 bg-brass mb-8"></div>
+<h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-chalk leading-tight mb-6 text-balance">Zapraszamy na oględziny i wycenę</h2>
+<a class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-brass hover:text-brasslight transition-colors my-4 inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap" href="tel:+48605304999">
+<svg aria-hidden="true" class="shrink-0 w-[32px] h-[32px] sm:w-[54px] sm:h-[54px]"><use href="#i-phone"/></svg>
 <span>605 304 999</span>
 </a>
-<p class="font-mono text-xs tracking-wide text-warmash mt-6 mb-2">
-            Pon.–pt. 08:00–17:00 | Krzyszkowice 320A (koło Myślenic)
-          </p>
-<p class="font-sans text-stone-400 text-sm italic max-w-md mb-10 font-light">
-            Z uwagi na indywidualny charakter każdego zlecenia oraz proces technologiczny terminy ustalamy wyłącznie z wyprzedzeniem.
-          </p>
-<div class="flex flex-wrap justify-center gap-4">
-<a class="px-10 py-5 bg-brass hover:bg-brasslight text-obsidian font-mono font-bold text-xs tracking-wide transition-colors shadow-2xl" href="tel:+48605304999">
-              Zadzwoń teraz: 605 304 999
-            </a>
-<a class="px-8 py-5 bg-stonecard border fine-border-stone hover:border-brass text-chalk font-mono text-xs tracking-wide transition-colors" href="tel:+48122722365">
-              Telefon stacjonarny: (12) 272 23 65
-            </a>
-</div>
+<p class="font-mono text-sm tracking-wide text-warmash mt-6 mb-2">Pon.–pt. 08:00–17:00 · Krzyszkowice 320A (koło Myślenic)</p>
+<p class="text-bone max-w-md mb-10">Telefon stacjonarny: <a class="text-brass hover:text-brasslight whitespace-nowrap" href="tel:+48122722365">(12) 272 23 65</a></p>
 </div>
 </div>
 </section>
 </main>
-<!-- ARCHIVAL MONOLITH FOOTER -->
-<footer class="w-full bg-obsidian border-t border-stoneline text-stone-400 pt-20 pb-12 font-sans">
-<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<footer class="w-full bg-obsidian border-t border-stoneline text-warmash pt-16 md:pt-20 pb-12">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-stoneline">
-<!-- Col 1: Bio -->
 <div class="flex flex-col">
-<span class="font-display text-xl text-chalk font-bold uppercase mb-4">Rymarstwo • Tapicerka</span>
-<p class="text-xs text-stone-400 leading-relaxed font-light mb-6">
-            Pracownia mistrzowskiego rzemiosła skórzanego Marcina Nowaka. Pielęgnujemy tradycje rymarskie i krawieckie od 1998 roku, tworząc tapicerki dedykowane pojazdom zabytkowym i luksusowym z najwyższej klasy skór naturalnych.
+<span class="font-display text-xl text-chalk font-bold uppercase mb-4">Rymarstwo · Tapicerka</span>
+<p class="text-sm leading-relaxed">
+            Pracownia Marcina Nowaka w Krzyszkowicach. W rodzinnym zakładzie rymarskim od 1998 roku, własna działalność od 2004 roku. Tapicerka pojazdów zabytkowych, współczesnych i konnych.
           </p>
-<div class="flex items-center gap-2 font-mono text-xs text-brass">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-<span>Brak pośpiechu • Trwałość na dekady</span>
 </div>
-</div>
-<!-- Col 2: Services 10 -->
 <div class="flex flex-col">
-<span class="font-mono text-xs text-chalk uppercase tracking-widest font-semibold mb-4">Wykaz Usług</span>
-<ul class="flex flex-col gap-2 font-mono text-xs text-warmash">
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Tapicerka skórzana klasyków</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Renowacja foteli i kanap</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Obszywanie kierownic i gałek</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Deski rozdzielcze i konsole</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Podsufitki i słupki</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Boczki drzwiowe i panele</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Rymarstwo rzemieślnicze</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Siedzenia motocyklowe</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Rekonstrukcja pianek i stelaży</a></li>
-<li><a class="hover:text-brass transition-colors" href="#katalog-uslug">Konserwacja i patynowanie skór</a></li>
+<h2 class="font-mono text-sm text-chalk uppercase tracking-widest font-semibold mb-4">Usługi</h2>
+<ul class="flex flex-col gap-2 text-sm">
+<li>Obszywanie kierownic</li>
+<li>Renowacja zabytków</li>
+<li>Tapicerka samochodowa</li>
+<li>Podsufitki</li>
+<li>Dachy kabrio</li>
+<li>Deski rozdzielcze</li>
+<li>Gałki i mieszki</li>
+<li>Siedzenia motocyklowe</li>
+<li>Meble antyczne</li>
+<li>Pojazdy konne</li>
 </ul>
 </div>
-<!-- Col 3: NAP -->
 <div class="flex flex-col">
-<span class="font-mono text-xs text-chalk uppercase tracking-widest font-semibold mb-4">Siedziba i Kontakt</span>
-<div class="flex flex-col gap-4 font-mono text-xs text-warmash">
+<h2 class="font-mono text-sm text-chalk uppercase tracking-widest font-semibold mb-4">Kontakt</h2>
+<address class="not-italic flex flex-col gap-4 text-sm">
 <div>
-<strong class="text-chalk block mb-1">Pracownia rzemieślnicza:</strong>
+<strong class="text-chalk block mb-1">Pracownia</strong>
 <span>Krzyszkowice 320A</span><br/>
 <span>32-445 Krzyszkowice</span>
 </div>
 <div>
-<strong class="text-chalk block mb-1">Telefony bezpośrednie:</strong>
-<a class="text-brass font-bold hover:underline block text-sm mb-1" href="tel:+48605304999">605 304 999</a>
-<a class="hover:underline block text-warmash" href="tel:+48122722365">(12) 272 23 65</a>
+<strong class="text-chalk block mb-1">Telefony</strong>
+<a class="inline-flex items-center gap-2 py-1 text-brass font-bold hover:underline underline-offset-4" href="tel:+48605304999"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>605 304 999</span></a><br/>
+<a class="inline-flex items-center gap-2 py-1 hover:underline underline-offset-4" href="tel:+48122722365"><svg aria-hidden="true" class="shrink-0 w-4 h-4"><use href="#i-phone"/></svg><span>(12) 272 23 65</span></a>
 </div>
 <div>
-<strong class="text-chalk block mb-1">Godziny otwarcia:</strong>
-<span>Poniedziałek – Piątek: 08:00 – 17:00</span>
+<strong class="text-chalk block mb-1">Godziny</strong>
+<span>Poniedziałek–piątek: 08:00–17:00</span>
 </div>
+</address>
 </div>
-</div>
-<!-- Col 4: Area -->
 <div class="flex flex-col">
-<span class="font-mono text-xs text-chalk uppercase tracking-widest font-semibold mb-4">Obszar Działania</span>
-<p class="text-xs text-stone-400 font-light mb-4">
-            Zlecenia realizujemy dla klientów indywidualnych, muzeów techniki i kolekcji prywatnych z całego regionu:
-          </p>
-<div class="flex flex-wrap gap-2 mb-6 font-mono text-[10px] uppercase">
-<span class="px-2.5 py-1 bg-atelier border fine-border-stone text-stone-300">Krzyszkowice</span>
-<span class="px-2.5 py-1 bg-atelier border fine-border-stone text-stone-300">Myślenice</span>
-<span class="px-2.5 py-1 bg-atelier border fine-border-stone text-stone-300">Kraków</span>
-<span class="px-2.5 py-1 bg-atelier border fine-border-stone text-stone-300">Małopolska</span>
-</div>
-<p class="text-xs text-stone-400 italic font-light">
-            Wyceny i konsultacje technologiczne prowadzimy indywidualnie przy oględzinach pojazdu.
-          </p>
+<h2 class="font-mono text-sm text-chalk uppercase tracking-widest font-semibold mb-4">Obszar działania</h2>
+<p class="text-sm mb-4">Zlecenia przyjmujemy z całego regionu:</p>
+<ul class="flex flex-wrap gap-2 font-mono text-xs uppercase">
+<li class="px-2.5 py-1 bg-atelier border fine-border-stone text-bone">Krzyszkowice</li>
+<li class="px-2.5 py-1 bg-atelier border fine-border-stone text-bone">Myślenice</li>
+<li class="px-2.5 py-1 bg-atelier border fine-border-stone text-bone">Kraków</li>
+<li class="px-2.5 py-1 bg-atelier border fine-border-stone text-bone">Małopolska</li>
+</ul>
 </div>
 </div>
-<!-- Legal bottom bar -->
-<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-stone-400">
-<p>© 2025 Rymarstwo – Marcin Nowak. Wszelkie prawa zastrzeżone.</p>
-<div class="flex items-center gap-6">
-<a class="hover:text-brass transition-colors" href="#">Polityka prywatności</a>
-<a class="hover:text-brass transition-colors" href="#">Dane rejestrowe</a>
-</div>
+<!-- CONFIRM: add links to the privacy policy and registration-data pages once they exist. -->
+<div class="pt-8 font-mono text-xs">
+<p>© 2026 Rymarstwo – Marcin Nowak</p>
 </div>
 </div>
 </footer>
+<script>
+  // Close the mobile menu after a jump link is tapped; <details> stays open otherwise.
+  document.querySelectorAll("header details a").forEach(a => a.addEventListener("click", () => a.closest("details").open = false));
+</script>
 </body></html>
